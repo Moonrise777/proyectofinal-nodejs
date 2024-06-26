@@ -22,7 +22,7 @@ app.post('/send-email', (req, res) => {
     const mailOptions = {
         from: 'codexno1company@gmail.com',
         to: 'arelyzuleika@gmail.com',
-        subject:`Formulario usado, email de: ${email}` ,
+        subject:`Formulario usado, email del usuario: ${email}` ,
         text: `Nombre: ${name}\nMensaje: ${message}\nGenero: ${gender}`
     };
 
