@@ -26,7 +26,7 @@ app.post('/send-email', (req, res) => {
     const mailOptions = {
         from: 'codexno1company@gmail.com',
         to: email,
-        subject: 'Muchas gracias por contactarnos, estos son sus datos',
+        subject: 'Muchas gracias por contactarnos, hemos recibido sus datos',
         text: `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}\nGenero: ${gender}`
     };
 
@@ -35,6 +35,7 @@ app.post('/send-email', (req, res) => {
             return res.status(500).send(error.toString());
         }
         res.send('Correo enviado: ' + info.response);
+        res.send('Correo enviado correctamente');
     });
 });
 
