@@ -20,7 +20,7 @@ app.post('/send-email', (req, res) => {
     const { name, email, message, gender } = req.body;
 
     const mailOptions = {
-        from: 'codexno1company@gmail.com',
+        from: user,
         to: email,
         subject: 'Nuevo mensaje de contacto',
         text: `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}\nGenero: ${gender}`
