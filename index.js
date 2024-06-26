@@ -19,8 +19,12 @@ const transporter = nodemailer.createTransport({
 app.post('/send-email', (req, res) => {
     const { name, email, message, gender } = req.body;
 
+    if (!email) {
+        return res.status(400).send('No se definió el destinatario (email)');
+    }
+
     const mailOptions = {
-        from: user,
+        from: 'codexno1company@gmail.com',
         to: email,
         subject: 'Nuevo mensaje de contacto',
         text: `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}\nGenero: ${gender}`
