@@ -30,8 +30,9 @@ app.post('/send-email', (req, res) => {
         if (error) {
             return res.status(500).send(error.toString());
         }
-        res.send('Correo enviado: ' + info.response);
-        res.status(200).send('Correo enviado correctamente');
+        else {
+            res.status(200).send('Correo enviado correctamente'+info.response);
+        }
     });
 });
 
