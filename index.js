@@ -26,7 +26,7 @@ app.post('/send-email', (req, res) => {
     const mailOptions = {
         from: 'codexno1company@gmail.com',
         to: email,
-        subject: 'Nuevo mensaje de contacto',
+        subject: 'Muchas gracias por contactarnos, estos son sus datos',
         text: `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}\nGenero: ${gender}`
     };
 
