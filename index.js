@@ -28,9 +28,11 @@ app.post('/send-email', (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return res.status(500).send(error.toString());
+            console.log('Error al enviar el correo:', error);
+            return res.status(500).json({ error: error.toString() });
         }
-        res.status(200).send('Correo enviado correctamente'+info.response);
+        console.log('Correo enviado:', info.response);
+        res.status(200).json({ message: 'Correo enviado correctamente' });
     });
 });
 
