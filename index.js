@@ -25,9 +25,9 @@ app.post('/send-email', (req, res) => {
 
     const mailOptions = {
         from: 'codexno1company@gmail.com',
-        to: email,
-        subject: 'Muchas gracias por contactarnos, hemos recibido sus datos',
-        text: `Nombre: ${name}\nEmail: ${email}\nMensaje: ${message}\nGenero: ${gender}`
+        to: 'arelyzuleika@gmail.com',
+        subject:`Pregunta desde el correo: ${email}` ,
+        text: `Nombre: ${name}\nMensaje: ${message}\nGenero: ${gender}`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
