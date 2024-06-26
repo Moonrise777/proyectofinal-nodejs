@@ -1,0 +1,11 @@
+{
+  "name": "proyectofinal-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grupo 6B",
+  "license": "ISC",
+  "description": ""
+}
